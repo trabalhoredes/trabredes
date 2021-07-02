@@ -2,8 +2,8 @@
 Trabalho apresentado à disciplina de Laboratório de Redes do curso de Eng. Elétrica IFES Campus Guarapari, ministrada pelo Prof. Dr. Alexandre Pereira do Carmo.
 
 # Alunos
-    - João Vitor Alves Barradas
-    - Peter Gleiser Garcez 
+  - João Vitor Alves Barradas
+  - Peter Gleiser Garcez 
 
 # Procedimentos
 
