@@ -17,10 +17,10 @@ Trabalho apresentado à disciplina de Laboratório de Redes do curso de Eng. El�
 3) Abra um terminal de comando dentro desta pasta. Dê o comando abaixo para baixar a imagem do monitor a partir do DockerHub e rodá-la: 
     - sudo docker run --rm -it --network=host -v "$PWD:/app/config" trabalhoredes/trabalho python3 monitor.py 127.0.0.1 8081
 
-4) Abra outro terminal de comando dentro da mesma pasta. Dê o comando abaixo para baixar a imagem do servidor a partir do DockerHub e rodá-la:
+4) Crie uma pasta e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar a imagem do servidor a partir do DockerHub e rodá-la:
     - sudo docker run --rm -it -p 8081:8081 -v "$(pwd):/app/www" trabalhoredes/servidor python3 server.py 8081
 
-5) Abra outro terminal de comando dentro da mesma pasta. Dê o comando abaixo para rodar o Apache e poder ver os resultados no navegador web: 
+5) Abra outro terminal de comando dentro da mesma pasta do passo 4. Dê o comando abaixo para rodar o Apache e poder ver os resultados no navegador web: 
     - sudo docker run --rm -it --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4 
 
-6) Abra um navegador web e digite: <IP da sua máquina>:8081
+6) Abra um navegador web e digite: <IP da máquina host>:8081
