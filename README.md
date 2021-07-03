@@ -12,15 +12,15 @@ Trabalho apresentado à disciplina de Laboratório de Redes do curso de Eng. El�
     - sudo apt-get remove docker-engine docker.io
     - sudo apt install docker.io
 
-2) Crie uma pasta e coloque dentro dela o arquivo config.txt contido na pasta "monitor" deste repositório. Você pode alterar à vontade os valores dos IPs presentes neste arquivo. 
+2) Crie uma pasta na máquina monitor e coloque dentro dela o arquivo config.txt contido na pasta "monitor" deste repositório. Você pode alterar à vontade os valores dos IPs presentes neste arquivo. 
 
-3) Abra um terminal de comando dentro desta pasta. Dê o comando abaixo para baixar a imagem do monitor a partir do DockerHub e rodá-la: 
+3) Abra um terminal de comando dentro desta pasta. Dê o comando abaixo para baixar a imagem a partir do DockerHub e rodar o contêiner: 
     - sudo docker run --rm -it --network=host -v "$PWD:/app/config" trabalhoredes/trabalho python3 monitor.py 127.0.0.1 8081
 
-4) Crie uma pasta e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar a imagem do servidor a partir do DockerHub e rodá-la:
+4) Crie uma pasta na máquina host e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar a imagem a partir do DockerHub e rodar o contêiner:
     - sudo docker run --rm -it -p 8081:8081 -v "$(pwd):/app/www" trabalhoredes/servidor python3 server.py 8081
 
 5) Abra outro terminal de comando dentro da mesma pasta do passo 4. Dê o comando abaixo para rodar o Apache e poder ver os resultados no navegador web: 
     - sudo docker run --rm -it --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4 
 
-6) Abra um navegador web e digite: <IP da máquina host>:8081
+6) Abra um navegador web e digite: <IP da máquina host>:8080
