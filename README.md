@@ -20,7 +20,7 @@ Trabalho apresentado à disciplina de Laboratório de Redes do curso de Eng. El�
 4) Na máquina host, crie uma pasta e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar e rodar o contêiner servidor a partir do DockerHub:
     - sudo docker run --rm -it -p 8081:8081 -v "$(pwd):/app/www" trabalhoredes/servidor python3 server.py 8081
 
-5) Após proceder o passo 4, um arquivo chamado "index.html" deve ser criado na pasta. Após se certificar de que este arquivo já consta na pasta, abra outro terminal de comando dentro da mesma pasta e dê o comando abaixo para rodar o contêiner do Apache e poder ver os resultados no navegador web: 
+5) Após proceder o passo 4, um arquivo chamado "index.html" será criado automaticamente na pasta. Após se certificar de que este arquivo já consta na pasta, abra outro terminal de comando dentro da mesma pasta e dê o comando abaixo para rodar o contêiner do Apache e poder ver os resultados no navegador web: 
     - sudo docker run --rm -it --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4 
 
 6) Abra um navegador web e digite: <IP da máquina host>:8080
