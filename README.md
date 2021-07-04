@@ -17,7 +17,7 @@ Trabalho apresentado à disciplina de Laboratório de Redes do curso de Eng. El�
 3) Abra um terminal de comando dentro da pasta do passo 2 acima. Dê o comando abaixo para baixar e rodar o contêiner do programa monitor a partir do DockerHub (não esqueça de adicionar o IP da máquina host no campo assinalado <IP da máquina host>): 
     - sudo docker run --rm -it --network=host -v "$PWD:/app/config" trabalhoredes/trabalho python3 monitor.py <IP da máquina host> 8081
 
-4) Na máquina host, crie uma pasta e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar e rodar o contêiner servidor a partir do DockerHub:
+4) Na máquina host, crie uma pasta e abra um terminal de comando dentro desta. Dê o comando abaixo para baixar e rodar o contêiner do programa servidor a partir do DockerHub:
     - sudo docker run --rm -it -p 8081:8081 -v "$(pwd):/app/www" trabalhoredes/servidor python3 server.py 8081
 
 5) Após proceder o passo 4, um arquivo chamado "index.html" será criado automaticamente na pasta. Após se certificar de que este arquivo já consta na pasta, abra outro terminal de comando dentro da mesma pasta e dê o comando abaixo para rodar o contêiner do Apache e poder ver os resultados no navegador web: 
